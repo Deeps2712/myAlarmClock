@@ -1,0 +1,44 @@
+<!DOCTYPE html> <!-- Declares the document type and HTML version -->
+<html lang="en"> <!-- Starting tag of HTML, lang attribute specifies the language -->
+
+<head> <!-- Contains meta-information and links to CSS and JS files -->
+    <meta charset="UTF-8"> <!-- Specifies the character set used -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the webpage responsive -->
+    <link rel="stylesheet" href="style.css"> <!-- Links to the CSS stylesheet -->
+    <title>Alarm Clock</title> <!-- Title of the webpage seen on the tab in the browser -->
+</head>
+
+<body> <!-- Starting tag for the body section, contains all visible content -->
+
+    <!-- The main clock display, initially set to a default time -->
+    <h1 id="clock">12:00:00 AM</h1>
+
+    <!-- Section to set an alarm -->
+    <h2>Set Alarm</h2> <!-- Heading -->
+    <!-- Input for the user to specify the hour for the alarm, between 1 and 12 -->
+    <input type="number" id="hour" placeholder="Hour" min="1" max="12">
+    <!-- Input for the user to specify the minute for the alarm, between 0 and 59 -->
+    <input type="number" id="minute" placeholder="Minute" min="0" max="59">
+    <!-- Input for the user to specify the second for the alarm, between 0 and 59 -->
+    <input type="number" id="second" placeholder="Second" min="0" max="59">
+    <!-- Dropdown for the user to select AM or PM -->
+    <select id="ampm">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+    </select>
+    <!-- Button to set the alarm, triggers the setAlarm function when clicked -->
+    <button onclick="setAlarm()">Set Alarm</button>
+
+    <!-- Section to display the list of set alarms -->
+    <h3>Alarms</h3> <!-- Heading -->
+    <!-- Unordered list to dynamically display alarms -->
+    <ul id="alarmsList"></ul>
+
+    <!-- Button to stop the currently ringing alarm, triggers the stopAlarm function when clicked -->
+    <button onclick="stopAlarm()">Stop Alarm</button> 
+
+    <!-- Linking the external JavaScript file -->
+    <script src="script.js"></script>
+</body> <!-- Closing tag for the body section -->
+
+</html> <!-- Closing tag for HTML -->

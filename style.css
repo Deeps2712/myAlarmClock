@@ -1,0 +1,16 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('assets/img/img.jpg'); /* replace 'path-to-your-image.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+}
+
+#clock {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #000000; /* white color to make text visible against a likely dark background */
+}
